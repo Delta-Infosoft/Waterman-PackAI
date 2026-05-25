@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/bg_white_rounded_18"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by Date"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- From Date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From Date"
+        android:textSize="13sp"
+        android:textColor="#757575"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFromDate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center_vertical"
+        android:text="Select From Date"
+        android:textColor="#212121"
+        android:background="@drawable/bg_bordered_rounded_10_primary"/>
+
+    <!-- To Date -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To Date"
+        android:textSize="13sp"
+        android:textColor="#757575"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtToDate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center_vertical"
+        android:text="Select To Date"
+        android:textColor="#212121"
+        android:background="@drawable/bg_bordered_rounded_10_primary"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnReset"
+            style="@style/kumbh.regular.black.16"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="Reset"
+            android:background="@drawable/bg_bordered_rounded_10_primary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/kumbh.regular.black.16"
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Apply"
+            android:background="@drawable/bg_bordered_rounded_10_primary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--================ Profile Header Card =================-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profileHeaderCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bg_ai_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Circular Profile Image using CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProfileImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/bg_bordered_rounded_primary"
+                app:cardCornerRadius="36dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnSubmit"
+                style="@style/kumbh.regular.white.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_ai_gradient"
+                android:drawableStart="@drawable/ic_ai"
+                android:paddingHorizontal="10dp"
+                android:elevation="5dp"
+                android:translationZ="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="3dp"
+                android:text="AI Linked"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBgPhoto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_bordered_rounded_primary"
+                app:layout_constraintBottom_toBottomOf="@id/cardProfileImage"
+                app:layout_constraintEnd_toEndOf="@id/cardProfileImage"
+                app:layout_constraintStart_toStartOf="@id/cardProfileImage"
+                app:layout_constraintTop_toTopOf="@id/cardProfileImage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBgPhoto1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:background="@drawable/bg_bordered_rounded_white"
+                app:layout_constraintBottom_toBottomOf="@id/cardProfileImage"
+                app:layout_constraintEnd_toEndOf="@id/cardProfileImage"
+                app:layout_constraintStart_toStartOf="@id/cardProfileImage"
+                app:layout_constraintTop_toTopOf="@id/cardProfileImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFullName"
+                style="@style/kumbh.bold.white.16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Gunjan Godhani"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cardProfileImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.35" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUserName"
+                style="@style/kumbh.regular.white.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="gunjan123"
+                app:layout_constraintEnd_toEndOf="@id/txtFullName"
+                app:layout_constraintStart_toStartOf="@id/txtFullName"
+                app:layout_constraintTop_toBottomOf="@id/txtFullName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--================ Profile Details =================-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewContactDetails"
+            style="@style/kumbh.bold.black.16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="CONTACT DETAILS"
+            app:layout_constraintEnd_toEndOf="@id/profileHeaderCard"
+            app:layout_constraintStart_toStartOf="@id/profileHeaderCard"
+            app:layout_constraintTop_toBottomOf="@id/profileHeaderCard" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayMobile"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtViewContactDetails">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMobile"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_mobile_no"
+                android:focusable="false"
+                android:hint="Mobile No"
+                android:text="8140909930" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayEmail"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLayMobile"
+            app:layout_constraintStart_toStartOf="@id/txtLayMobile"
+            app:layout_constraintTop_toBottomOf="@id/txtLayMobile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_email"
+                android:focusable="false"
+                android:hint="Email Id" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewDeviceSession"
+            style="@style/kumbh.bold.black.16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="DEVICE &amp; SESSION"
+            app:layout_constraintEnd_toEndOf="@id/profileHeaderCard"
+            app:layout_constraintStart_toStartOf="@id/profileHeaderCard"
+            app:layout_constraintTop_toBottomOf="@id/txtLayEmail" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayIMEI"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLayEmail"
+            app:layout_constraintStart_toStartOf="@id/txtLayEmail"
+            app:layout_constraintTop_toBottomOf="@id/txtViewDeviceSession">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtIMEI"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_imei"
+                android:focusable="false"
+                android:hint="IMEI Code" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayAdmin"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLayIMEI"
+            app:layout_constraintStart_toStartOf="@id/txtLayIMEI"
+            app:layout_constraintTop_toBottomOf="@id/txtLayIMEI">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtIsAdmin"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_admin"
+                android:focusable="false"
+                android:hint="Admin Status" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayLastLogin"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLayAdmin"
+            app:layout_constraintStart_toStartOf="@id/txtLayAdmin"
+            app:layout_constraintTop_toBottomOf="@id/txtLayAdmin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtLastLogin"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_last_login"
+                android:focusable="false"
+                android:hint="Last Login Date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayLastLogout"
+            style="@style/CommonTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLayLastLogin"
+            app:layout_constraintStart_toStartOf="@id/txtLayLastLogin"
+            app:layout_constraintTop_toBottomOf="@id/txtLayLastLogin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtLastLogout"
+                style="@style/CommonTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_last_login"
+                android:focusable="false"
+                android:hint="Last Logout Date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

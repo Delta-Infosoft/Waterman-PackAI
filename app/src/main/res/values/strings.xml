@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Waterman PackAI</string>
+    <string name="label_login">Login</string>
+    <string name="btn_login">Login</string>
+    <string name="hint_user_name">User name</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_serial_no">Enter/scan serial no</string>
+    <string name="label_your_approval_code">Your Approval Code</string>
+    <string name="btn_share_it">Share It</string>
+    <string name="btn_submit">Submit</string>
+    <string name="hint_remark">Remark</string>
+    <string name="validation_please_upload_photo">Please upload Photo</string>
+    <string name="validation_please_select_image">Please select image</string>
+    <string name="validation_please_select_image_pump">Please select image of pump</string>
+    <string name="validation_please_select_image_motor">Please select image of motor</string>
+    <string name="validation_please_select_image_pump_set">Please select image of pump set</string>
+    <string name="validation_please_press_the_check_serial_no">Please press the Check Serial No</string>
+    <string name="validation_please_enter_or_scan_sr_no">Please enter or scan SR NO</string>
+    <string name="toolbar_title_zoom_image_view">Zoom Image View</string>
+    <string name="hint_serial_no_sort">Serial No</string>
+
+    <!-- Common Titles -->
+    <string name="title_pump_sr_no">Pump Sr.No</string>
+    <string name="title_motor_sr_no">Motor Sr.No</string>
+    <string name="title_logo">Logo</string>
+        <string name="title_pump_type">Pump Type No</string>
+    <string name="title_motor_type">Motor Type No</string>
+
+    <!-- Serial Number Messages -->
+    <string name="msg_serial_failed">iERP SR.No:<b>%1$s</b>\nChecked With Found SR.No: <b>%2$s</b>\n\nSerial number mismatch</string>
+    <string name="msg_serial_success">iERP SR.No:<b>%1$s</b>\nChecked With Found SR.No: <b>%2$s</b>\n\nSerial number verified successfully</string>
+    <string name="msg_serial_unknown">Serial number status could not be determined.</string>
+    <!-- Logo Messages -->
+    <string name="msg_logo_failed">iERP Customer Name: %1$s\nChecked With Found Name: %2$s\n\nLogo mismatch</string>
+    <string name="msg_logo_success">iERP Customer Name: %1$s\nChecked With Found Name: %2$s\n\nLogo verified successfully</string>
+    <string name="msg_logo_unknown">Logo verification status could not be determined.</string>
+    <!-- Type Number Messages -->
+    <string name="msg_type_failed">iERP ItmName: %1$s\n\nChecked With Found Type No: %2$s\n\nType number mismatch</string>
+    <string name="msg_type_success">iERP ItmName: %1$s\n\nChecked With Found Type No: %2$s\n\nType number verified successfully</string>
+    <string name="msg_type_unknown">Type number status could not be determined.</string>
+
+</resources>

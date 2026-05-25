@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLayBrandName"
+                style="@style/CommonTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtBrandName"
+                    style="@style/CommonTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="Brand Name"
+                    android:imeOptions="actionDone"
+                    android:paddingEnd="40dp"
+                    tools:text="KSB" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtViewChangeBrandName"
+                style="@style/kumbh.regular.white.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_ai_gradient"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:text="Change Brand Name"
+                app:layout_constraintBottom_toBottomOf="@id/txtLayBrandName"
+                app:layout_constraintEnd_toEndOf="@id/txtLayBrandName"
+                app:layout_constraintTop_toTopOf="@id/txtLayBrandName" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLaySerialNumber"
+                style="@style/CommonTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@id/txtLayBrandName"
+                app:layout_constraintStart_toStartOf="@id/txtLayBrandName"
+                app:layout_constraintTop_toBottomOf="@id/txtLayBrandName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtSerialNumber"
+                    style="@style/CommonTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_serial_no"
+                    android:imeOptions="actionDone"
+                    android:paddingEnd="40dp"
+                    tools:text="Gunjan" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtViewCheckSrNo"
+                style="@style/kumbh.regular.white.12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_ai_gradient"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="7dp"
+                android:text="Check Serial No"
+                app:layout_constraintEnd_toEndOf="@id/txtLaySerialNumber"
+                app:layout_constraintTop_toBottomOf="@id/txtLaySerialNumber" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewScanSerialNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_scan"
+                app:layout_constraintBottom_toBottomOf="@id/txtLaySerialNumber"
+                app:layout_constraintEnd_toEndOf="@id/txtLaySerialNumber"
+                app:layout_constraintTop_toTopOf="@id/txtLaySerialNumber" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constValidation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/txtLaySerialNumber"
+                app:layout_constraintStart_toStartOf="@id/txtLaySerialNumber"
+                app:layout_constraintTop_toBottomOf="@id/txtViewCheckSrNo">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLaySoNo"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSoNo"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="So No"
+                        tools:text="123" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayItemName"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@id/txtLaySoNo"
+                    app:layout_constraintStart_toStartOf="@id/txtLaySoNo"
+                    app:layout_constraintTop_toBottomOf="@id/txtLaySoNo">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtItemName"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="Item name"
+                        tools:text="Dholka" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayCustomerName"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@id/txtLayItemName"
+                    app:layout_constraintStart_toStartOf="@id/txtLayItemName"
+                    app:layout_constraintTop_toBottomOf="@id/txtLayItemName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtCustomerName"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="Customer name"
+                        tools:text="KSB" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayRemark"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="@id/txtLayCustomerName"
+                    app:layout_constraintStart_toStartOf="@id/txtLayCustomerName"
+                    app:layout_constraintTop_toBottomOf="@id/txtLayCustomerName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSoRemark"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="SO Remark"
+                        tools:text="Test" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroupOcrType"
+                android:layout_width="0dp"
+                android:visibility="visible"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/constValidation"
+                app:layout_constraintStart_toStartOf="@id/constValidation"
+                app:layout_constraintTop_toBottomOf="@id/constValidation">
+
+                <RadioButton
+                    android:id="@+id/radioWithOutOcr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Without OCR" />
+
+                <RadioButton
+                    android:id="@+id/radioWithOcr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="With OCR" />
+
+            </RadioGroup>
+
+            <!--==================================================-->
+            <!--THis is for Pump-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayoutCamGallery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                android:paddingVertical="10dp"
+                app:layout_constraintEnd_toStartOf="@id/constLayoutCamGalleryMotor"
+                app:layout_constraintStart_toStartOf="@id/constValidation"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupOcrType">
+
+                <!-- Upload Photo Icon -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgUpload"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_pump_photo_upload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Upload Photo Text -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUploadPhoto"
+                    style="@style/kumbh.bold.black.12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_upload_photo"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    android:text="पंप की फोटो अपलोड करें"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUpload"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--==================================================-->
+            <!--THis is for Motor -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayoutCamGalleryMotor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                android:paddingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/constLayoutCamGallery"
+                app:layout_constraintEnd_toStartOf="@id/constLayoutCamGalleryPumpSet"
+                app:layout_constraintStart_toEndOf="@id/constLayoutCamGallery"
+                app:layout_constraintTop_toTopOf="@id/constLayoutCamGallery">
+
+                <!-- Upload Photo Icon -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgUploadMotor"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_motor_photo_upload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Upload Photo Text -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUploadPhotoMotor"
+                    style="@style/kumbh.bold.black.12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_upload_photo"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    android:text="मोटर की फोटो अपलोड करें"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUploadMotor"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--==================================================-->
+            <!--THis is for Pump Set -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayoutCamGalleryPumpSet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                android:paddingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/constLayoutCamGalleryMotor"
+                app:layout_constraintEnd_toEndOf="@id/constValidation"
+                app:layout_constraintStart_toEndOf="@id/constLayoutCamGalleryMotor"
+                app:layout_constraintTop_toTopOf="@id/constLayoutCamGalleryMotor">
+
+                <!-- Upload Photo Icon -->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgUploadPumpSet"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_pump_set"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Upload Photo Text -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUploadPhotoPumpSet"
+                    style="@style/kumbh.bold.black.12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_upload_photo"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    android:text="पंप सेट की फोटो अपलोड करें"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUploadPumpSet"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constAiAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                android:padding="12dp"
+                app:layout_constraintEnd_toEndOf="@id/constValidation"
+                app:layout_constraintStart_toStartOf="@id/constValidation"
+                app:layout_constraintTop_toBottomOf="@id/constLayoutCamGallery">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="AI analysing image"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/txtPercent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Percentage -->
+                <TextView
+                    android:id="@+id/txtPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:textColor="#6E6E6E"
+                    android:textSize="14sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/txtTitle"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progressBarAnalysis"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:max="100"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/bg_gradient_progress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+                <!-- Confidence Text -->
+                <TextView
+                    android:id="@+id/txtConfidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Detection confidence 94%"
+                    android:textColor="#0F766E"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/progressBarAnalysis" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cropViewContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="@id/constValidation"
+                app:layout_constraintStart_toStartOf="@id/constValidation"
+                app:layout_constraintTop_toBottomOf="@id/constAiAnalysis">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/kumbh.bold.white.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/bg_ai_gradient"
+                    android:gravity="center"
+                    android:text="Logo - Scan"
+                    app:layout_constraintBottom_toTopOf="@id/imgViewTopCrop"
+                    app:layout_constraintEnd_toEndOf="@id/imgViewTopCrop"
+                    app:layout_constraintStart_toStartOf="@id/imgViewTopCrop" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgViewTopCrop"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_no_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/imgViewMidCropMotor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.32" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/kumbh.bold.white.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/bg_ai_gradient"
+                    android:gravity="center"
+                    android:text="Pump View"
+                    app:layout_constraintBottom_toTopOf="@id/imgViewMidCropMotor"
+                    app:layout_constraintEnd_toEndOf="@id/imgViewMidCropMotor"
+                    app:layout_constraintStart_toStartOf="@id/imgViewMidCropMotor" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgViewMidCropMotor"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_no_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/imgViewMidCropPump"
+                    app:layout_constraintStart_toEndOf="@id/imgViewTopCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.32" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/kumbh.bold.white.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/bg_ai_gradient"
+                    android:gravity="center"
+                    android:text="Motor View"
+                    app:layout_constraintBottom_toTopOf="@id/imgViewMidCropPump"
+                    app:layout_constraintEnd_toEndOf="@id/imgViewMidCropPump"
+                    app:layout_constraintStart_toStartOf="@id/imgViewMidCropPump" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgViewMidCropPump"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_rounded_fill_secondary_validation"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_no_image"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/imgViewMidCropMotor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.32" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constVarificationStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_bordered_rounded_10_primary"
+                app:layout_constraintEnd_toEndOf="@id/cropViewContainer"
+                app:layout_constraintStart_toStartOf="@id/cropViewContainer"
+                app:layout_constraintTop_toBottomOf="@id/cropViewContainer">
+
+                <!-- AI Confirm Text -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAiInsight"
+                    style="@style/kumbh.bold.black.16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_ai"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="AI Insight"
+                    android:textColor="@color/gray_3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPumpSerialNo"
+                    style="@style/kumbh.bold.black.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAiInsight"
+                    tools:text="Pump sr.no status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPumpTypeText"
+                    style="@style/kumbh.bold.black.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtPumpSerialNo"
+                    tools:text="Pump type status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtMotorSerialNo"
+                    style="@style/kumbh.bold.black.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtPumpTypeText"
+                    tools:text="Motor sr.no status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtMotorTypeText"
+                    style="@style/kumbh.bold.black.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtMotorSerialNo"
+                    tools:text="Motor type status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtBodyScan"
+                    style="@style/kumbh.bold.black.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:drawableEnd="@drawable/ic_info"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtMotorTypeText"
+                    tools:text="Body sr.no status" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLayOtherRemark"
+                style="@style/CommonTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="@id/constVarificationStatus"
+                app:layout_constraintStart_toStartOf="@id/constVarificationStatus"
+                app:layout_constraintTop_toBottomOf="@id/constVarificationStatus">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtOtherRemark"
+                    style="@style/CommonTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_remark"
+                    android:imeOptions="actionDone" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtViewResultApiRes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="Api Result text"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="15dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLayOtherRemark"
+                app:layout_constraintVertical_bias="0" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtViewMotorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="Motor text"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtViewResultApiRes"
+                app:layout_constraintVertical_bias="0" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/txtViewPumpText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="Pump Text Recognize"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtViewMotorText"
+                app:layout_constraintVertical_bias="0" />
+
+            <!--==================================================-->
+            <!--THis is for the Photo List Documents-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearAttachPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_edit_text_white_rounded_15"
+                android:paddingVertical="15dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/txtLayOtherRemark"
+                app:layout_constraintStart_toStartOf="@id/txtLayOtherRemark"
+                app:layout_constraintTop_toBottomOf="@id/txtLayOtherRemark">
+
+                <!-- Upload Photo Icon -->
+                <ImageView
+                    android:id="@+id/imgUpload1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_upload_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Upload Photo Text -->
+                <TextView
+                    android:id="@+id/tvUploadPhoto1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:text="Upload Image From Camera/Gallery"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUpload1"
+                    tools:ignore="HardcodedText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lylAttachPhotoList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_ai_gradient"
+                android:padding="3dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/constValidation"
+                app:layout_constraintStart_toStartOf="@id/constValidation"
+                app:layout_constraintTop_toBottomOf="@id/linearAttachPhoto">
+
+                <!-- Photo Count -->
+                <TextView
+                    android:id="@+id/tvPhotoCount"
+                    style="@style/kumbh.regular.white.14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:gravity="center"
+                    android:text="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tvPhotoTitle"
+                    style="@style/kumbh.regular.white.14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="List Of Attached Photo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivPhotoFilter"
+                    app:layout_constraintStart_toEndOf="@id/tvPhotoCount"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Filter Icon -->
+                <ImageView
+                    android:id="@+id/ivPhotoFilter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/lylAttachmentPhotoListRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/constVarificationStatus"
+                app:layout_constraintStart_toStartOf="@id/constVarificationStatus"
+                app:layout_constraintTop_toBottomOf="@id/lylAttachPhotoList" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/button_primary_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="20dp"
+                android:text="@string/btn_submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lylAttachmentPhotoListRow"
+                app:layout_constraintVertical_bias="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_ai_gradient"
+        android:elevation="15dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:indeterminateTintMode="src_in"
+        android:padding="10dp"
+        android:progressDrawable="@drawable/bg_gradient_progress"
+        android:translationZ="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</FrameLayout>
+
+

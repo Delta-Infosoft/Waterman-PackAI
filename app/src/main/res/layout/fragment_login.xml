@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgViewDeltaAi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_delta_ai"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_shape_solid_gradiant_bottom_curve"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_waterman_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgViewDeltaAi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewLabelSignIn"
+            android:layout_width="0dp"
+            style="@style/kumbh.bold.white.30"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Sign in to your Account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgViewLogo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewLabelEnterSignInLabel"
+            android:layout_width="0dp"
+            style="@style/kumbh.bold.white.14"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintBottom_toTopOf="@id/cardViewLogin"
+            android:text="Enter your username and password to log in "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtViewLabelSignIn" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="-50dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayUserName"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtUserName"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_mobile_no"
+                        android:hint="@string/hint_user_name"
+                        tools:text="Gunjan" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtLayPassword"
+                    style="@style/CommonTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:endIconMode="password_toggle"
+                    app:layout_constraintEnd_toEndOf="@id/txtLayUserName"
+                    app:layout_constraintStart_toStartOf="@id/txtLayUserName"
+                    app:layout_constraintTop_toBottomOf="@id/txtLayUserName">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPassword"
+                        style="@style/CommonTextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_mobile_no"
+                        android:hint="@string/hint_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogin"
+                    style="@style/button_primary_rounded"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/btn_login"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/txtLayPassword"
+                    app:layout_constraintStart_toStartOf="@id/txtLayPassword"
+                    app:layout_constraintTop_toBottomOf="@id/txtLayPassword"
+                    app:layout_constraintVertical_bias="0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constViewApprovalCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_white_rounded_solid_gradiant"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/cardViewLogin"
+            app:layout_constraintStart_toStartOf="@id/cardViewLogin"
+            app:layout_constraintTop_toBottomOf="@id/txtViewDesignBy"
+            app:layout_constraintVertical_bias="1">
+
+            <!-- TextInputLayout -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtViewApprovalCode"
+                style="@style/kumbh.bold.black.16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/label_your_approval_code"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextApprovalCode"
+                style="@style/BaseEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_admin"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/label_your_approval_code"
+                android:inputType="none"
+                android:longClickable="true"
+                android:textIsSelectable="true"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/txtViewApprovalCode"
+                app:layout_constraintStart_toStartOf="@id/txtViewApprovalCode"
+                app:layout_constraintTop_toBottomOf="@id/txtViewApprovalCode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewDesignBy"
+            android:layout_width="0dp"
+            style="@style/kumbh.bold.black.16"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/gray_1"
+            android:textSize="12sp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Designed and developed by Delta Infosoft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewLogin" />
+
+        <ProgressBar
+            android:id="@+id/progressBarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_in"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            android:elevation="15dp"
+            android:padding="10dp"
+            android:progressDrawable="@drawable/bg_gradient_progress"
+            android:background="@drawable/bg_ai_gradient"
+            android:translationZ="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

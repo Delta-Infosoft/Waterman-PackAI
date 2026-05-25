@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775493137430",
+    "project_id": "waterman-packai",
+    "storage_bucket": "waterman-packai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775493137430:android:de58bcf0923bb7c4d53137",
+        "android_client_info": {
+          "package_name": "com.waterman.packai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbeGyfUrEoP2ZRdDhqKZCzWVEBgHRqvHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

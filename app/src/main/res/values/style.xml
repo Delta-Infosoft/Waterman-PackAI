@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="button_white_rounded">
+        <item name="android:background">@drawable/bg_white_rounded_18</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingBottom">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="button_primary_rounded">
+        <item name="android:background">@drawable/bg_ai_gradient</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BaseEditText">
+        <item name="android:background">@drawable/bg_edit_text_white_rounded_15</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingTop">21dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingBottom">21dp</item>
+        <item name="android:fontFamily">@font/kumbh_sans_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
+    <style name="CommonTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Hint -->
+        <item name="hintTextColor">@color/gray</item>
+
+        <!-- Box -->
+        <item name="boxStrokeColor">@color/gray</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxCornerRadiusTopStart">6dp</item>
+        <item name="boxCornerRadiusTopEnd">6dp</item>
+        <item name="boxCornerRadiusBottomStart">6dp</item>
+        <item name="boxCornerRadiusBottomEnd">6dp</item>
+
+        <!-- Error -->
+        <item name="errorEnabled">false</item>
+    </style>
+
+    <style name="CommonTextInputEditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <!-- Text -->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:inputType">text</item>
+        <item name="maxLines">1</item>
+
+        <!-- Hint -->
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="hintTextAppearance">@style/CommonHintText</item>
+
+        <!-- Padding -->
+        <!-- Control vertical padding manually -->
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">7dp</item>
+        <item name="android:paddingEnd">7dp</item>
+
+        <item name="android:drawablePadding">5dp</item>
+
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="CommonHintText" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <!--========================================================================================-->
+    <!--=========================This for the all the font family===============================-->
+    <style name="kumbh.bold" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kumbh_sans_bold</item>
+    </style>
+
+    <style name="kumbh.light" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kumbh_sans_light</item>
+    </style>
+
+    <style name="kumbh.regular" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kumbh_sans_regular</item>
+    </style>
+
+    <style name="kumbh.medium" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/kumbh_sans_medium</item>
+    </style>
+
+    <!--========================================================================================-->
+    <!--=========================This for the color===============================-->
+
+    <style name="kumbh.bold.primary" parent="kumbh.bold">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="kumbh.bold.white" parent="kumbh.bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="kumbh.bold.black" parent="kumbh.bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--=========================================================-->
+    <!--===================== Regular ============================-->
+
+    <style name="kumbh.regular.white" parent="kumbh.regular">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="kumbh.regular.gray" parent="kumbh.regular">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="kumbh.regular.black" parent="kumbh.regular">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--=========================================================-->
+    <!--===================== Medium ============================-->
+
+    <style name="kumbh.medium.gray_3" parent="kumbh.medium">
+        <item name="android:textColor">@color/gray_3</item>
+    </style>
+
+
+    <!--========================================================================================-->
+    <!--=========================This for the size===============================-->
+    <style name="kumbh.bold.white.30" parent="kumbh.bold.white">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="kumbh.bold.white.24" parent="kumbh.bold.white">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="kumbh.bold.white.18" parent="kumbh.bold.white">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="kumbh.bold.white.14" parent="kumbh.bold.white">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="kumbh.bold.white.16" parent="kumbh.bold.white">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="kumbh.bold.black.12" parent="kumbh.bold.black">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="kumbh.bold.black.14" parent="kumbh.bold.black">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="kumbh.bold.black.16" parent="kumbh.bold.black">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="kumbh.bold.black.22" parent="kumbh.bold.black">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="kumbh.bold.black.24" parent="kumbh.bold.black">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="kumbh.bold.primary.18" parent="kumbh.bold.primary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--=========================================================-->
+    <!--===================== Regular ============================-->
+    <style name="kumbh.regular.white.24" parent="kumbh.regular.white">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="kumbh.regular.white.22" parent="kumbh.regular.white">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="kumbh.regular.white.18" parent="kumbh.regular.white">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="kumbh.regular.white.14" parent="kumbh.regular.white">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="kumbh.regular.white.12" parent="kumbh.regular.white">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="kumbh.regular.gray.14" parent="kumbh.regular.gray">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="kumbh.regular.black.16" parent="kumbh.regular.black">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="kumbh.regular.black.14" parent="kumbh.regular.black">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="kumbh.regular.black.12" parent="kumbh.regular.black">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--=========================================================-->
+    <!--===================== Medium ============================-->
+    <style name="kumbh.medium.gray_3.18" parent="kumbh.medium.gray_3">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="kumbh.medium.gray_3.14" parent="kumbh.medium.gray_3">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+</resources>

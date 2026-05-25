@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constLayMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bordered_rounded_10_primary">
+
+            <View
+                android:id="@+id/viewStart"
+                android:layout_width="6dp"
+                android:layout_height="0dp"
+                android:background="@color/primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtViewSoNo"
+                style="@style/kumbh.bold.black.16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="SO/4418-25-26" />
+
+            <!-- Status -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtVerified"
+                style="@style/kumbh.bold.white.18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_rounded_fill_secondary"
+                android:drawableStart="@drawable/ic_verified"
+                android:drawablePadding="6dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="Verified"
+                android:textSize="10sp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="@id/txtViewSoNo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtViewSoNo" />
+
+            <!-- Serial Label -->
+            <TextView
+                android:id="@+id/txtSerialLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Serial Number"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/txtViewSoNo"
+                app:layout_constraintTop_toBottomOf="@id/txtViewSoNo" />
+
+            <!-- Inserted Date Label -->
+            <TextView
+                android:id="@+id/txtDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Inserted Date"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtSerialLabel" />
+
+            <!-- Serial Value -->
+            <TextView
+                android:id="@+id/txtSerialValue"
+                style="@style/kumbh.regular.black.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="start"
+                android:text="2601K5360daddadadddadvsssvssvsvcssscsscscscccdccdsvsvsvsvsvsvsvsvsvsad"
+                app:layout_constraintEnd_toStartOf="@id/txtDateValue"
+                app:layout_constraintStart_toStartOf="@id/txtSerialLabel"
+                app:layout_constraintTop_toBottomOf="@id/txtSerialLabel" />
+
+            <!-- Date Value -->
+            <TextView
+                android:id="@+id/txtDateValue"
+                style="@style/kumbh.regular.black.14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="end"
+                android:text="2020-05-01 06:05:46 pm vcscscsccc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtSerialValue"
+                app:layout_constraintTop_toBottomOf="@id/txtDateLabel" />
+
+
+            <!-- Divider -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/gray_2"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSerialValue" />
+
+            <!-- AI Icon -->
+            <ImageView
+                android:id="@+id/imgAi"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_ai"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/divider"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <!-- AI Confirm Text -->
+            <TextView
+                style="@style/kumbh.regular.black.12"
+                android:id="@+id/txtAiConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="AI confirms 100%"
+                app:layout_constraintBottom_toBottomOf="@id/imgAi"
+                app:layout_constraintStart_toEndOf="@id/imgAi"
+                app:layout_constraintTop_toTopOf="@id/imgAi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

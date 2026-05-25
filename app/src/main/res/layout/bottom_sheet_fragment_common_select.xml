@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?><!--============================================================-->
+<!--This For The Gender Picker-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constGenderPicker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+    <TextView
+        android:id="@+id/txtViewSelect"
+        style="@style/kumbh.bold.black.22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--====================================================-->
+    <!--================ Camera/Gallery =====================-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constCameraGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewSelect">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewCamera"
+            style="@style/kumbh.regular.black.14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_camera"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="2dp"
+            android:text="Camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewCamera"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_disabled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtViewCamera" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewGallery"
+            style="@style/kumbh.regular.black.14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_photo"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="2dp"
+            android:text="Gallery"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewCamera" />
+
+        <View
+            android:id="@+id/viewGallery"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_disabled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtViewGallery" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--====================================================-->
+    <!--================ Document/File =====================-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constDocumentFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtViewSelect">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtViewDocumentFile"
+            style="@style/kumbh.regular.black.14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_photo"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingVertical="2dp"
+            android:text="Document/File"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewtxtViewDocumentFile"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_disabled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtViewDocumentFile" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

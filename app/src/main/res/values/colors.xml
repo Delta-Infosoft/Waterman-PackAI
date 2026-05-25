@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#339999</color>
+    <color name="primary_dark">#006A67</color>
+    <color name="primary_light">#4FB7B3</color>
+
+    <color name="startColor">#001E1E1E</color>
+    <color name="primary_light_1">#0080804D</color>
+
+    <color name="secondary">#5EC4BF</color>
+    <color name="secondary_dark">#3AA7A2</color>
+    <color name="secondary_light">#A8E3E0</color>
+
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F4F7F7</color>
+
+    <color name="text_primary">#0F2E2D</color>
+    <color name="text_secondary">#5F7F7D</color>
+    <color name="text_disabled">#9DB7B5</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <color name="gray">#A4A4A4</color>
+    <color name="gray_1">#6A6A6A</color>
+    <color name="gray_2">#F5F5F5</color>
+    <color name="gray_3">#2D2D2D</color>
+    <color name="gray_4">#808080</color>
+
+    <color name="green_1">#99289D0B</color>
+    <color name="green_2">#4D289D0B</color>
+    <color name="green_3">#6B289D0B</color>
+
+    <color name="red_1">#FF0000</color>
+    <color name="red_2">#34FF0000</color>
+    <color name="red_3">#4DFF0000</color>
+
+
+    <color name="blue">#47a0e2</color>
+
+    <color name="pink">#efb7b8</color>
+
+    <color name="yellow">#e2c93a</color>
+    <color name="yellow_1">#4DE2C93A</color>
+
+    <color name="orange">#F79521</color>
+
+
+</resources>
